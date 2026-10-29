@@ -32,9 +32,11 @@ export const HomePage: React.FC<HomePageProps> = ({
           <img
             src="/assets/aistudio/c99QpHCNl6N_8DDZTmgsVqZnAC5TtCgEA_m9CbDwYir8w59UjA3rj7UrCUfw3xOSdLq2h1TQSqTFciZoUW1Mv09wCI2MNUFvZHIUx_W1R2H61nqKZHSuVOPe91NQYLd_PAJ7zLPE2nEKXdBDTBnEzae8K01sUPw3BPkWRen8Ob7yIymJ2nPI5QAgwJHyWaZn_5e83773e.jpg"
             alt="Làng rèn Hiền Lương bên dòng sông Bồ"
-            className="w-full h-full object-cover object-center opacity-30 filter brightness-75 scale-105 transition-transform duration-1000"
+            className="w-full h-full object-cover object-center opacity-75 sm:opacity-85 filter brightness-95 scale-100 transition-transform duration-1000"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#211D1A] via-[#211D1A]/70 to-[#211D1A]/50" />
+          {/* Subtle directional gradient to keep text readable while showcasing the village gate photo clearly */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#211D1A]/85 via-[#211D1A]/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#211D1A] via-transparent to-black/20" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 py-16 sm:py-28 lg:py-32">
