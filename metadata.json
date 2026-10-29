@@ -1,0 +1,6 @@
+{
+  "name": "Hiền Lương — Cổng Thông Tin Di Sản Làng Rèn Cổ Huế",
+  "description": "Bảo tồn và quảng bá Di sản văn hóa phi vật thể Làng nghề truyền thống rèn Hiền Lương hơn 500 năm tuổi bên dòng sông Bồ, Thừa Thiên Huế.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
