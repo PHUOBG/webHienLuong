@@ -39,7 +39,7 @@ export const HomePage: React.FC<HomePageProps> = ({
           <div className="absolute inset-0 bg-gradient-to-t from-[#211D1A] via-transparent to-black/20" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 py-16 sm:py-28 lg:py-32">
+        <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 py-16 sm:py-28 lg:py-32">
           <div className="max-w-3xl space-y-6">
             
             {/* Eyebrow */}
@@ -108,7 +108,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       </section>
 
       {/* SECTION 2: EXPLORE THE VILLAGE (Editorial Cards) */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-8">
+      <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
           <div>
             <span className="text-xs font-bold uppercase tracking-wider text-[#C94E16]">
@@ -221,7 +221,7 @@ export const HomePage: React.FC<HomePageProps> = ({
 
       {/* SECTION 3: THE BLACKSMITHING TRADITION (Highlight Craft) */}
       <section className="bg-[#FAF4EB] py-16 border-y border-[#E8DFC9]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-8">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             
             {/* Left image feature */}
@@ -300,7 +300,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       </section>
 
       {/* SECTION 4: 4 SIGNATURE PRODUCTS (Showcase) */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-8">
+      <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
         <div className="text-center max-w-2xl mx-auto mb-10 space-y-2">
           <span className="text-xs font-bold uppercase tracking-wider text-[#C94E16]">
             SẢN VẬT TIÊU BIỂU
@@ -348,7 +348,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       </section>
 
       {/* SECTION 5: ARTISANS TEASER */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-8">
+      <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
         <div className="bg-[#211D1A] rounded-2xl text-white p-6 sm:p-10 lg:p-12 overflow-hidden relative">
           <div className="relative z-10 max-w-2xl space-y-4">
             <span className="text-xs font-bold uppercase tracking-wider text-[#C5A15B]">
@@ -400,7 +400,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       </section>
 
       {/* SECTION 6: LATEST ARTICLES */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-8">
+      <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
         <div className="flex items-center justify-between mb-8">
           <div>
             <span className="text-xs font-bold uppercase tracking-wider text-[#C94E16]">
@@ -468,7 +468,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       </section>
 
       {/* SECTION 7: MEDIA GALLERY PREVIEW */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-8">
+      <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
         <div className="flex items-center justify-between mb-8">
           <div>
             <span className="text-xs font-bold uppercase tracking-wider text-[#C94E16]">
@@ -514,7 +514,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       </section>
 
       {/* SECTION 8: COMMUNITY CONTRIBUTION & EXPERIENCE CTA BANNER */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-8">
+      <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
         <div className="bg-[#FAF4EB] border border-[#E8DFC9] rounded-2xl p-6 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-2 text-center md:text-left">
             <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#211D1A]">

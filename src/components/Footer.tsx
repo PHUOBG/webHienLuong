@@ -10,7 +10,7 @@ interface FooterProps {
 export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBookingModal }) => {
   return (
     <footer className="w-full bg-[#FAF8F4] border-t border-[#E8DFC9] text-[#211D1A] pt-12 pb-6">
-      <div className="max-w-7xl mx-auto px-4 sm:px-8">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 pb-10 border-b border-[#E8DFC9]">
           
           {/* Brand info column */}
