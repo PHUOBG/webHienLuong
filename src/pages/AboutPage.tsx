@@ -192,6 +192,69 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenBookingM
             </div>
           </section>
 
+          {/* SECTION: BẢN ĐỒ VỊ TRÍ ĐỊA LÝ HIỀN LƯƠNG */}
+          <section className="space-y-3 pt-6 border-t border-[#E8DFC9]">
+            <h3 className="font-serif font-bold text-xl sm:text-2xl text-[#108E6F] flex items-center gap-2">
+              <span>Bản đồ:</span>
+            </h3>
+
+            <div className="relative rounded-2xl overflow-hidden border border-[#E8DFC9] bg-stone-100 shadow-sm">
+              {/* Embedded Interactive Google Map */}
+              <iframe
+                title="Bản đồ vị trí Làng Hiền Lương"
+                src="https://maps.google.com/maps?q=Hi%E1%BB%81n+L%C6%B0%C6%A1ng,+Phong+%C4%90i%E1%BB%81n,+Hu%E1%BA%BF&t=m&z=15&output=embed"
+                width="100%"
+                height="420"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-[380px] sm:h-[430px] block"
+              />
+
+              {/* Top-Left Floating Info Card (Matching Google Maps Widget) */}
+              <div className="absolute top-3 left-3 z-10 bg-white/95 backdrop-blur-xs rounded-xl p-3 sm:p-3.5 shadow-lg border border-stone-200/80 max-w-[270px] sm:max-w-[310px] space-y-2 pointer-events-auto">
+                <div>
+                  <h4 className="font-bold text-sm sm:text-base text-stone-900 leading-snug">
+                    Hiền Lương
+                  </h4>
+                  <p className="text-[11px] text-stone-600 mt-0.5 leading-relaxed">
+                    Hiền Lương, Phong Điền, Tp. Huế, Huế, Việt Nam
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-2 pt-1">
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=Hi%E1%BB%81n+L%C6%B0%C6%A1ng,+Phong+%C4%90i%E1%BB%81n,+Th%E1%BB%ABa+Thi%C3%AAn+Hu%E1%BA%BF"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#1A73E8] hover:bg-[#1557b0] text-white text-xs font-semibold shadow-xs transition"
+                  >
+                    <ExternalLink className="w-3.5 h-3.5" />
+                    <span>Mở trong Maps</span>
+                  </a>
+
+                  <a
+                    href="https://www.google.com/maps/dir/?api=1&destination=Hi%E1%BB%81n+L%C6%B0%C6%A1ng,+Phong+%C4%90i%E1%BB%81n,+Th%E1%BB%ABa+Thi%C3%AAn+Hu%E1%BA%BF"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-8 h-8 rounded-full bg-[#1A73E8] hover:bg-[#1557b0] text-white flex items-center justify-center shadow-xs transition"
+                    title="Chỉ đường đến Hiền Lương"
+                  >
+                    <Navigation className="w-4 h-4" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Source Attribution Right-Aligned */}
+            <div className="flex justify-end pt-1">
+              <p className="text-xs sm:text-sm font-bold text-stone-800">
+                Nguồn: Khám phá Huế tổng hợp
+              </p>
+            </div>
+          </section>
+
         </div>
 
         {/* Right Column: Sidebar Widgets (col-span-4) */}
