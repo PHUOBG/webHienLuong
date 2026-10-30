@@ -189,7 +189,58 @@ export const HISTORIC_SITES: HistoricSite[] = [
       'Di tích Kiến trúc Nghệ thuật cấp Quốc gia theo Quyết định 776-QĐ/BT năm 1992'
     ],
     image: '/assets/chua-giac-luong-tam-quan.jpg',
-    imageCaption: 'Cổng Tam quan Chùa Giác Lương – Kiệt tác nghệ thuật kiến trúc khảm sành sứ cổ kính hơn 300 năm bên bờ sông Bồ.'
+    imageCaption: 'Cổng Tam quan Chùa Giác Lương – Kiệt tác nghệ thuật kiến trúc khảm sành sứ cổ kính hơn 300 năm bên bờ sông Bồ.',
+    gallery: [
+      {
+        id: 'cgl-tong-the',
+        image: '/assets/chua-giac-luong-tong-the.jpg',
+        title: 'Toàn Cảnh Chùa Giác Lương (Góc chụp Flycam)',
+        caption: 'Toàn cảnh quần thể di tích nhìn từ trên cao',
+        desc: 'Trục kiến trúc đăng đối từ Cổng Tam Quan, con đường gạch đỏ dẫn qua lư hương đồng vào Chánh Điện giữa tán cây cổ thụ và các ngôi bảo tháp, lăng mộ cổ thanh tịnh ven sông Bồ.'
+      },
+      {
+        id: 'cgl-chuong-dong',
+        image: '/assets/chua-giac-luong-chuong-dong.jpg',
+        title: 'Bảo Vật Đại Hồng Chung Đúc Năm 1819 (Gia Long thứ 18)',
+        caption: 'Chuông đồng cổ kính hơn 200 năm tuổi',
+        desc: 'Đại hồng chung quý giá treo trên giá gỗ lim chạm khắc rồng phượng tinh xảo. Văn bia và chữ Hán khắc quanh chuông ghi tạc công đức cúng dường của các phường lò rèn làng Hiền Lương.'
+      },
+      {
+        id: 'cgl-hai-ong-tuong',
+        image: '/assets/chua-giac-luong-hai-ong-tuong.jpg',
+        title: 'Hai Vị Đại Lực Sĩ Kim Cương (Thần Hộ Pháp Chấp Kim Cương)',
+        caption: 'Hai pho tượng Hộ Pháp uy nghiêm gác cổng tam quan',
+        desc: 'Đứng đối diện nhau ở hai bên tả hữu bên trong vòm Cổng Tam Quan, hai vị thần Hộ Pháp mang giáp trụ uy dũng bảo vệ chốn thiền môn thanh tịnh của làng cổ.'
+      },
+      {
+        id: 'cgl-chanh-dien',
+        image: '/assets/chua-giac-luong-chanh-dien.png',
+        title: 'Tiền Đường Chánh Điện Nhà Rường Gỗ Lim 2 Gian 4 Chái',
+        caption: 'Kiến trúc tiền đường với hàng cột chạm rồng hoa sen',
+        desc: 'Hàng cột đắp nổi rồng cuộn hoa sen tinh xảo cùng hệ thống cửa thượng song hạ bản bằng gỗ lim quý, bảo tồn nguyên vẹn tinh hoa kiến trúc gỗ Đàng Trong thời Lê Trung Hưng.'
+      },
+      {
+        id: 'cgl-khuon-vien',
+        image: '/assets/chua-giac-luong-khuon-vien.jpg',
+        title: 'Khuôn Viên Chốn Thiền Môn & Cây Sứ Cổ Thụ Trăm Năm',
+        caption: 'Con đường gạch đỏ rợp bóng cây sứ cổ thụ',
+        desc: 'Không gian trầm mặc, thanh tịnh với hàng cây sứ đại cổ thụ râm mát, đắp nền cho đỉnh lư hương đồng uy nghi trước sân tiền đường.'
+      },
+      {
+        id: 'cgl-tam-quan-3goc',
+        image: '/assets/chua-giac-luong-cong-tam-quan-3goc.png',
+        title: 'Cổng Tam Quan 2 Tầng Khảm Sành Sứ Rồng Phượng',
+        caption: '3 góc nhìn Cổng Tam quan đồ sộ bậc nhất xứ Huế',
+        desc: 'Kiến trúc 3 cửa vòm cuốn bên dưới và vọng lầu đồ sộ, từng góc mái chạm nổi hoa văn sành sứ tuyệt tác bề thế hơn cả nhiều ngôi quốc tự ở Cố Đô.'
+      },
+      {
+        id: 'cgl-la-thanh',
+        image: '/assets/chua-giac-luong-la-thanh.png',
+        title: 'Vòng La Thành Gạch Cổ Chu Vi 79m x 55.2m',
+        caption: 'Tường la thành gạch vồ bao bọc khuôn viên cổ tự',
+        desc: 'Bức tường gạch cao 1.2m rêu phong vững chãi bao quanh khu đất hình chữ nhật rộng gần nửa hecta, ngăn cách không gian tâm linh với xóm làng.'
+      }
+    ]
   },
   {
     id: 'nha-tho-to-nghe-ren',
@@ -238,13 +289,68 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 'hl-02',
     code: 'HL-02',
-    title: 'Chùa Cổ Giác Lương Tự',
+    title: 'Cổng Tam Quan Chùa Giác Lương',
     category: 'di-tich',
     categoryLabel: 'DI TÍCH & TÂM LINH',
-    image: '/assets/aistudio/_ang_r_n_2_9d85b900.jpg',
-    caption: 'Không gian tâm linh: Chùa cổ được xây dựng năm 1774, nơi gửi gắm tâm linh thợ rèn đất Huế.',
+    image: '/assets/chua-giac-luong-tam-quan.jpg',
+    caption: 'Cổng Tam quan 2 tầng khảm sành sứ rồng phượng cổ kính hơn 300 năm bên bờ sông Bồ.',
     meta: 'Di tích Quốc gia cấp 1 (1992)',
+    attribution: 'Ảnh: Tư liệu khảo cổ di tích'
+  },
+  {
+    id: 'hl-02b',
+    code: 'HL-02B',
+    title: 'Đại Hồng Chung đúc năm 1819',
+    category: 'di-tich',
+    categoryLabel: 'DI TÍCH & TÂM LINH',
+    image: '/assets/chua-giac-luong-chuong-dong.jpg',
+    caption: 'Chuông đồng niên hiệu Gia Long thứ 18 khắc danh tánh các phường thợ rèn làng Hiền Lương phụng cúng.',
+    meta: 'Niên đại 1819 • Chùa Giác Lương',
     attribution: 'Ảnh: Lưu trữ BQL Di tích'
+  },
+  {
+    id: 'hl-02c',
+    code: 'HL-02C',
+    title: 'Hai Vị Đại Lực Sĩ Kim Cương',
+    category: 'di-tich',
+    categoryLabel: 'DI TÍCH & TÂM LINH',
+    image: '/assets/chua-giac-luong-hai-ong-tuong.jpg',
+    caption: 'Hai pho tượng Hộ Pháp Chấp Kim Cương uy nghiêm canh gác cổng tam quan chốn thiền môn.',
+    meta: 'Tượng Hộ Pháp • Chùa Giác Lương',
+    attribution: 'Ảnh: Khảo cổ di tích'
+  },
+  {
+    id: 'hl-02d',
+    code: 'HL-02D',
+    title: 'Toàn cảnh Chùa Giác Lương (Flycam)',
+    category: 'di-tich',
+    categoryLabel: 'DI TÍCH & TÂM LINH',
+    image: '/assets/chua-giac-luong-tong-the.jpg',
+    caption: 'Toàn cảnh quần thể di tích Chùa Giác Lương nhìn từ trên cao rợp bóng cây xanh ven sông Bồ.',
+    meta: 'Di tích Quốc gia 1992 • Flycam Dân Trí',
+    attribution: 'Ảnh: Báo Dân Trí'
+  },
+  {
+    id: 'hl-02e',
+    code: 'HL-02E',
+    title: 'Khuôn viên chốn thiền môn & Cây sứ cổ thụ',
+    category: 'di-tich',
+    categoryLabel: 'DI TÍCH & TÂM LINH',
+    image: '/assets/chua-giac-luong-khuon-vien.jpg',
+    caption: 'Đường gạch đỏ rợp mát dưới tàng cây sứ đại trăm năm tuổi cùng đỉnh lư hương đồng uy nghi.',
+    meta: 'Khuôn viên di tích • Chùa Giác Lương',
+    attribution: 'Ảnh: Tư liệu thực địa'
+  },
+  {
+    id: 'hl-02f',
+    code: 'HL-02F',
+    title: 'Tiền đường Chánh Điện nhà rường gỗ lim',
+    category: 'di-tich',
+    categoryLabel: 'DI TÍCH & TÂM LINH',
+    image: '/assets/chua-giac-luong-chanh-dien.png',
+    caption: 'Cột tiền đường đắp nổi rồng cuộn hoa sen tinh xảo cùng cửa thượng song hạ bản gỗ lim quý.',
+    meta: 'Kiến trúc Lê Trung Hưng',
+    attribution: 'Ảnh: Tư liệu BQL Di tích'
   },
   {
     id: 'hl-03',
@@ -445,8 +551,8 @@ export const ARTICLES: Article[] = [
     date: '20/06/2024',
     views: 2890,
     author: 'Nhà nghiên cứu văn hóa Huế',
-    coverImage: '/assets/aistudio/_ang_r_n_2_9d85b900.jpg',
-    coverCaption: 'Mái chùa Giác Lương Tự phủ rêu phong cổ kính thời Lê Trung Hưng.',
+    coverImage: '/assets/chua-giac-luong-tong-the.jpg',
+    coverCaption: 'Toàn cảnh Chùa Giác Lương chụp từ trên cao (Flycam): Ngôi cổ tự hơn 300 năm linh thiêng bên bờ sông Bồ.',
     summary: 'Chùa Giác Lương Tự không chỉ là di tích kiến trúc nghệ thuật cấp quốc gia mà còn là linh hồn tâm linh che chở cho lửa lò của người thợ rèn suốt nửa thiên niên kỷ.',
     contentParagraphs: [
       'Được khởi dựng năm 1774 thời vua Lê Ý Tông, chùa Giác Lương bảo lưu nguyên vẹn kết cấu rường gỗ lim truyền thống xứ Đàng Trong. Từng thanh kèo, con xỏ đều được chạm khắc tỉ mỉ hoa văn rồng mây, hoa cúc, tùng hạc.',

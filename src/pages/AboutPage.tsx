@@ -261,8 +261,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenBookingM
                 className="flex items-start gap-3 cursor-pointer group"
               >
                 <img
-                  src="/assets/aistudio/_ang_r_n_2_9d85b900.jpg"
-                  alt="Di tích"
+                  src="/assets/chua-giac-luong-tam-quan.jpg"
+                  alt="Di tích Chùa Giác Lương"
                   className="w-14 h-14 rounded-md object-cover shrink-0 border border-[#E8DFC9]"
                 />
                 <div>

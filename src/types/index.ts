@@ -58,6 +58,14 @@ export interface GalleryItem {
   attribution: string;
 }
 
+export interface HistoricSiteGalleryItem {
+  id: string;
+  image: string;
+  title: string;
+  caption: string;
+  desc: string;
+}
+
 export interface HistoricSite {
   id: string;
   title: string;
@@ -67,6 +75,7 @@ export interface HistoricSite {
   features: string[];
   image: string;
   imageCaption: string;
+  gallery?: HistoricSiteGalleryItem[];
 }
 
 export interface Article {
