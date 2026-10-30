@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { TourBookingRequest } from '../types';
 import { sendBookingEmailViaGmail } from '../services/gmailService';
 import { getAccessToken, googleSignIn } from '../services/firebaseAuth';
-import { X, CheckCircle2, AlertCircle, Mail, Send, Calendar, Users, Flame, ShieldAlert } from 'lucide-react';
+import { X, CheckCircle2, AlertCircle, Mail, Send, Calendar, Users, ShieldAlert } from 'lucide-react';
 import { User } from 'firebase/auth';
 
 interface ExperienceBookingModalProps {
@@ -83,9 +83,13 @@ export const ExperienceBookingModal: React.FC<ExperienceBookingModalProps> = ({
         
         {/* Modal Header */}
         <div className="bg-[#211D1A] text-white p-4 sm:p-5 flex items-center justify-between border-b border-[#75543D]">
-          <div className="flex items-center gap-2.5">
-            <div className="p-2 rounded-lg bg-[#C94E16] text-white">
-              <Flame className="w-5 h-5" />
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-[#C94E16] flex items-center justify-center p-2 shadow-sm shrink-0">
+              <img
+                src="/assets/favicon.png"
+                alt="Logo Làng Hiền Lương"
+                className="w-full h-full object-contain brightness-0 invert"
+              />
             </div>
             <div>
               <h3 className="font-serif font-bold text-base sm:text-lg text-amber-100">
