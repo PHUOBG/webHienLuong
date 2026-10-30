@@ -116,9 +116,9 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenBookingM
           <figure className="space-y-2 pt-4">
             <div className="rounded-xl overflow-hidden border border-[#E8DFC9] shadow-sm">
               <img
-                src="/assets/aistudio/c99QpHCNl6N_8DDZTmgsVqZnAC5TtCgEA_m9CbDwYir8w59UjA3rj7UrCUfw3xOSdLq2h1TQSqTFciZoUW1Mv09wCI2MNUFvZHIUx_W1R2H61nqKZHSuVOPe91NQYLd_PAJ7zLPE2nEKXdBDTBnEzae8K01sUPw3BPkWRen8Ob7yIymJ2nPI5QAgwJHyWaZn_5e83773e.jpg"
-                alt="Khuôn viên làng rợp bóng cây xanh nhìn từ trên cao"
-                className="w-full h-[280px] sm:h-[360px] object-cover"
+                src="/assets/toan-canh-lang-hien-luong-tren-cao.jpg"
+                alt="Toàn cảnh làng cổ Hiền Lương và cánh đồng lúa thanh bình nhìn từ trên cao"
+                className="w-full h-[280px] sm:h-[420px] object-cover"
               />
             </div>
             <figcaption className="text-xs text-stone-500 italic flex items-center gap-1.5">
@@ -355,45 +355,6 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenBookingM
             </div>
           </div>
 
-          {/* Widget 3: Chỉ Dẫn Đường Đi */}
-          <div className="bg-white border border-[#E8DFC9] rounded-xl p-5 shadow-xs space-y-3">
-            <div className="flex items-center justify-between">
-              <h3 className="font-serif font-bold text-base text-[#211D1A] flex items-center gap-1.5">
-                <Navigation className="w-4 h-4 text-[#C94E16]" />
-                Chỉ Dẫn Đường Đi
-              </h3>
-              <span className="text-[11px] font-semibold text-[#75543D]">25km từ TP Huế</span>
-            </div>
-
-            {/* Static Map Graphic */}
-            <div className="rounded-lg overflow-hidden border border-[#E8DFC9] relative bg-stone-100">
-              <div className="h-36 bg-[#E8F0E8] relative flex items-center justify-center p-4">
-                {/* River path visual */}
-                <div className="absolute inset-0 opacity-20 bg-[radial-gradient(#C94E16_1px,transparent_1px)] [background-size:16px_16px]" />
-                <div className="relative z-10 text-center space-y-1">
-                  <div className="w-8 h-8 rounded-full bg-[#C94E16] text-white flex items-center justify-center mx-auto shadow-md">
-                    <MapPin className="w-4 h-4" />
-                  </div>
-                  <p className="text-xs font-bold text-[#211D1A]">Làng Rèn Hiền Lương</p>
-                  <p className="text-[10px] text-stone-600">Ven bờ sông Bồ • Tỉnh lộ 11B</p>
-                </div>
-              </div>
-            </div>
-
-            <p className="text-xs text-stone-600 leading-relaxed">
-              Từ trung tâm TP Huế di chuyển theo Quốc lộ 1A về phía Bắc ~20km đến Ngã ba An Lỗ, rẽ theo Tỉnh lộ 11B men theo sông Bồ chừng 5km là đến cổng làng Hiền Lương.
-            </p>
-
-            <a
-              href="https://maps.google.com/?q=Hiền+Lương,+Phong+Hiền,+Phong+Điền,+Thừa+Thiên+Huế"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full inline-flex items-center justify-center gap-1.5 py-2 text-xs font-bold text-[#75543D] hover:text-[#C94E16] border border-[#E8DFC9] rounded-lg hover:bg-[#FAF8F4] transition-colors"
-            >
-              <span>Mở chỉ đường Google Maps</span>
-              <ExternalLink className="w-3.5 h-3.5" />
-            </a>
-          </div>
 
         </div>
 
