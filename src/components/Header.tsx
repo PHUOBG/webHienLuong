@@ -83,7 +83,7 @@ export const Header: React.FC<HeaderProps> = ({
         </nav>
 
         {/* Right actions */}
-        <div className="flex items-center gap-1 sm:gap-1.5 xl:gap-2 shrink-0">
+        <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
           {/* Search Button */}
           <button
             onClick={onOpenSearch}
@@ -92,16 +92,6 @@ export const Header: React.FC<HeaderProps> = ({
             aria-label="Tìm kiếm"
           >
             <Search className="w-4 h-4 sm:w-4.5 sm:h-4.5" />
-          </button>
-
-          {/* AI Assistant button */}
-          <button
-            onClick={onOpenAi}
-            className="hidden md:inline-flex items-center gap-1.5 px-2 xl:px-2.5 2xl:px-3 py-1.5 rounded-full border border-[#C94E16] text-[#C94E16] bg-amber-50/60 hover:bg-[#C94E16] hover:text-white transition-all text-[11px] xl:text-xs font-semibold shadow-xs whitespace-nowrap shrink-0"
-          >
-            <Sparkles className="w-3.5 h-3.5 shrink-0 text-[#C94E16]" />
-            <span className="hidden 2xl:inline">Hư lão số AI</span>
-            <span className="hidden xl:inline 2xl:hidden">Hư lão AI</span>
           </button>
 
           {/* Direction CTA */}
@@ -149,21 +139,10 @@ export const Header: React.FC<HeaderProps> = ({
           <div className="pt-3 border-t border-[#E8DFC9] flex flex-col gap-2">
             <button
               onClick={() => {
-                onOpenAi();
-                setMobileMenuOpen(false);
-              }}
-              className="w-full flex items-center justify-center gap-2 py-2.5 rounded-md bg-amber-100 text-[#C94E16] border border-[#C94E16] font-semibold text-sm"
-            >
-              <Sparkles className="w-4 h-4" />
-              <span>Trò chuyện cùng Hư lão số AI</span>
-            </button>
-
-            <button
-              onClick={() => {
                 onNavigate('lien-he');
                 setMobileMenuOpen(false);
               }}
-              className="w-full flex items-center justify-center gap-2 py-2 rounded-md bg-[#C94E16] text-white text-xs font-semibold"
+              className="w-full flex items-center justify-center gap-2 py-2.5 rounded-md bg-[#C94E16] text-white text-xs font-semibold"
             >
               <Navigation className="w-4 h-4" />
               <span>Liên hệ & Chỉ đường BQL</span>

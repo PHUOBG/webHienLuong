@@ -74,14 +74,6 @@ export const HomePage: React.FC<HomePageProps> = ({
               >
                 Tìm về cội nguồn
               </button>
-
-              <button
-                onClick={onOpenAi}
-                className="px-4 py-3 rounded-lg bg-[#FAF8F4]/10 hover:bg-[#FAF8F4]/20 text-amber-200 border border-amber-300/30 font-semibold text-xs sm:text-sm tracking-wide transition-all flex items-center gap-1.5"
-              >
-                <Sparkles className="w-4 h-4 text-amber-400" />
-                <span>Hỏi Hư lão số AI</span>
-              </button>
             </div>
           </div>
 
@@ -193,8 +185,8 @@ export const HomePage: React.FC<HomePageProps> = ({
           >
             <div className="h-52 overflow-hidden relative">
               <img
-                src="/assets/aistudio/_ang_r_n_2_9d85b900.jpg"
-                alt="Chùa Giác Lương Tự"
+                src="/assets/chua-giac-luong-tam-quan.jpg"
+                alt="Chùa Cổ Giác Lương Tự"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <span className="absolute top-3 left-3 px-2.5 py-1 rounded-sm bg-[#75543D] text-amber-200 text-[11px] font-bold">

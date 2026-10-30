@@ -225,22 +225,12 @@ export default function App() {
           </button>
         )}
 
-        {/* Floating AI & Booking Pills */}
+        {/* Floating Booking Pill */}
         <div className="pointer-events-auto flex items-center gap-2">
-          <button
-            onClick={() => setIsAiOpen(true)}
-            aria-label="Mở Hư Lão Số AI tư vấn di sản"
-            className="group flex items-center gap-2 px-3.5 py-2.5 rounded-full bg-[#211D1A] text-[#F8F5EF] border border-[#C5A15B]/40 shadow-xl hover:bg-[#362E2A] transition transform hover:-translate-y-0.5"
-            title="Hư Lão Số AI tư vấn di sản"
-          >
-            <Sparkles className="w-4 h-4 text-[#C5A15B] animate-pulse" />
-            <span className="text-xs font-semibold tracking-wide hidden sm:inline">Hư Lão Số AI</span>
-          </button>
-
           <button
             onClick={() => handleOpenBookingModal('Tư vấn nhanh')}
             aria-label="Đăng ký trải nghiệm làng rèn"
-            className="group flex items-center gap-2 px-3.5 py-2.5 rounded-full bg-[#C94E16] text-white shadow-xl hover:bg-[#B34211] transition transform hover:-translate-y-0.5"
+            className="group flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#C94E16] text-white shadow-xl hover:bg-[#B34211] transition transform hover:-translate-y-0.5"
             title="Đăng ký trải nghiệm làng rèn"
           >
             <HeartHandshake className="w-4 h-4" />
@@ -253,12 +243,6 @@ export default function App() {
       <SearchModal
         isOpen={isSearchOpen}
         onClose={() => setIsSearchOpen(false)}
-        onNavigate={handleNavigate}
-      />
-
-      <HuLaoAiModal
-        isOpen={isAiOpen}
-        onClose={() => setIsAiOpen(false)}
         onNavigate={handleNavigate}
       />
 

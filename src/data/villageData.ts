@@ -178,17 +178,18 @@ export const HISTORIC_SITES: HistoricSite[] = [
   {
     id: 'chua-giac-luong',
     title: 'Chùa Cổ Giác Lương Tự',
-    subtitle: 'Di Tích Kiến Trúc Nghệ Thuật Cấp Quốc Gia (Xếp hạng 1992)',
-    period: 'Khởi dựng năm Giáp Ngọ (1774) thời Lê Trung Hưng',
-    description: 'Chùa Giác Lương là chốn neo đậu tâm linh thiêng nhất của người dân Hiền Lương. Được xây dựng từ gỗ lim cổ kính với hệ rường cột, xuyên xà chạm lộng tinh xảo mang dấu ấn nghệ thuật điêu khắc gỗ dân gian đặc trưng xứ Đàng Trong, mái lợp ngói âm dương phong rêu trăm tuổi. Nơi đây lưu giữ bệ thờ tâm linh của phường thợ rèn.',
+    subtitle: 'Di Tích Kiến Trúc Nghệ Thuật Cấp Quốc Gia (Xếp hạng 23/06/1992)',
+    period: 'Khởi dựng thời Lê Trung Hưng (trên 300 năm lịch sử bảo tồn)',
+    description: 'Chùa Giác Lương là cổ tự tâm linh tiêu biểu nhất của làng rèn Hiền Lương, khởi dựng từ thời Lê Trung Hưng bởi bà Hoàng Thị Phiếu cùng các tộc trưởng trong làng ở xứ Cồn Bệ, sau dời về xóm Phước Tự (xóm Chùa) bên dòng sông Bồ. Chùa xây hướng Nam gồm 2 gian 4 chái bằng sườn gỗ lim quý chạm trổ tinh mỹ lợp ngói liệt, bao bọc bởi vòng la thành gạch cổ kính dài 79m, rộng 55,2m. Cổng Tam quan 2 tầng uy nghiêm khảm sành sứ hoa văn rồng phượng đồ sộ hơn nhiều ngôi quốc tự ở Cố Đô. Nơi đây phối thờ 12 vị Thủy tổ khai làng và lưu giữ quả đại hồng chung đúc năm 1819 khắc tên những người thợ rèn tài hoa của làng.',
     features: [
-      'Kiến trúc rường gỗ lim truyền thống Cố Đô',
-      'Bệ thờ linh thiêng của cộng đồng thợ rèn cầu may',
-      'Hệ thống hoành phi, câu đối và chuông đồng cổ thế kỷ XVIII',
-      'Được Nhà nước xếp hạng Di tích cấp Quốc gia năm 1992'
+      'Cổng Tam quan 2 tầng đồ sộ khảm sành sứ rồng phượng tinh xảo bậc nhất xứ Huế',
+      'Kiến trúc nhà rường 2 gian 4 chái sườn gỗ lim lợp ngói liệt truyền thống',
+      'Đại hồng chung đúc năm 1819 (Gia Long thứ 18) khắc danh tánh các phường thợ rèn cúng dường',
+      'La thành gạch cổ chu vi 79m x 55,2m cùng hệ thống miếu Cao Các, miếu Thượng tướng quân Trần Quý Công',
+      'Di tích Kiến trúc Nghệ thuật cấp Quốc gia theo Quyết định 776-QĐ/BT năm 1992'
     ],
-    image: '/assets/aistudio/_ang_r_n_2_9d85b900.jpg',
-    imageCaption: 'Cổ tự Giác Lương – Bức tranh kiến trúc Phật giáo xứ Huế ẩn dưới tán bồ đề cổ thụ ngát ngàn.'
+    image: '/assets/chua-giac-luong-tam-quan.jpg',
+    imageCaption: 'Cổng Tam quan Chùa Giác Lương – Kiệt tác nghệ thuật kiến trúc khảm sành sứ cổ kính hơn 300 năm bên bờ sông Bồ.'
   },
   {
     id: 'nha-tho-to-nghe-ren',

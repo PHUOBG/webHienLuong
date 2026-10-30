@@ -118,6 +118,45 @@ export const HeritageSitesPage: React.FC<HeritageSitesPageProps> = ({
                   </div>
                 </div>
 
+                {/* Dedicated Documentary Photo Grid for Chùa Giác Lương */}
+                {site.id === 'chua-giac-luong' && (
+                  <div className="space-y-3 pt-2">
+                    <h4 className="font-serif font-bold text-sm text-[#211D1A] flex items-center gap-2">
+                      <Landmark className="w-4 h-4 text-[#C94E16]" />
+                      <span>Hình Ảnh Tư Liệu Khảo Cổ & Kiến Trúc Chùa Giác Lương</span>
+                    </h4>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div className="rounded-xl overflow-hidden border border-[#E8DFC9] bg-[#FAF8F4] group shadow-xs">
+                        <div className="h-52 overflow-hidden">
+                          <img
+                            src="/assets/chua-giac-luong-la-thanh.png"
+                            alt="La thành gạch bao bọc Chùa Giác Lương"
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          />
+                        </div>
+                        <div className="p-3 text-[11px] text-stone-600 bg-white">
+                          <p className="font-bold text-[#75543D]">Vòng la thành gạch cổ kính & Nhà Tăng</p>
+                          <p className="text-stone-500 mt-0.5 leading-relaxed">Chu vi hình chữ nhật dài 79m, rộng 55.2m, cao 1.2m bao bọc khuôn viên cổ tự hơn 300 năm.</p>
+                        </div>
+                      </div>
+
+                      <div className="rounded-xl overflow-hidden border border-[#E8DFC9] bg-[#FAF8F4] group shadow-xs">
+                        <div className="h-52 overflow-hidden">
+                          <img
+                            src="/assets/chua-giac-luong-cong-tam-quan-3goc.png"
+                            alt="Cổng Tam quan nhìn từ ngoài vào trong chùa"
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          />
+                        </div>
+                        <div className="p-3 text-[11px] text-stone-600 bg-white">
+                          <p className="font-bold text-[#75543D]">Cổng Tam quan 2 tầng khảm sành sứ</p>
+                          <p className="text-stone-500 mt-0.5 leading-relaxed">Kiến trúc 3 cửa vòm cuốn bên dưới và vọng lầu uy nghiêm, bề thế hơn nhiều ngôi quốc tự ở Huế.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
                 {/* Footer action of card */}
                 <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-[#F0E8D9]">
                   <div className="flex items-center gap-2 text-xs text-[#75543D]">
