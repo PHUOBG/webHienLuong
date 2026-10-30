@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { PageRoute, TourBookingRequest } from '../types';
 import { VILLAGE_INFO } from '../data/villageData';
 import { sendBookingConfirmationEmail } from '../services/gmailService';
+import { supabase } from '../services/supabaseClient';
 import { 
   MapPin, Phone, Mail, Clock, Send, 
   CheckCircle2, AlertCircle, HeartHandshake, Compass, 
@@ -58,6 +59,24 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
     setSubmitError(null);
 
     try {
+      // Lưu vào Supabase database
+      try {
+        await supabase.from('bookings').insert([
+          {
+            full_name: formData.fullName,
+            phone: formData.phone,
+            email: formData.email,
+            visitor_count: formData.visitorCount,
+            visit_date: formData.visitDate ? formData.visitDate : null,
+            experience_type: formData.experienceType,
+            message: formData.message,
+            status: 'pending'
+          }
+        ]);
+      } catch (dbErr) {
+        console.warn('Lưu Supabase contact/booking thất bại:', dbErr);
+      }
+
       await sendBookingConfirmationEmail(formData);
       setSubmitSuccess(true);
       setShowConfirmSendDialog(false);

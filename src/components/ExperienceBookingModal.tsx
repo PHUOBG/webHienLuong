@@ -4,6 +4,7 @@ import { sendBookingEmailViaGmail } from '../services/gmailService';
 import { getAccessToken, googleSignIn } from '../services/firebaseAuth';
 import { X, CheckCircle2, AlertCircle, Mail, Send, Calendar, Users, ShieldAlert } from 'lucide-react';
 import { User } from 'firebase/auth';
+import { supabase } from '../services/supabaseClient';
 
 interface ExperienceBookingModalProps {
   isOpen: boolean;
@@ -65,6 +66,24 @@ export const ExperienceBookingModal: React.FC<ExperienceBookingModalProps> = ({
       } else {
         // Fallback local processing
         await new Promise((r) => setTimeout(r, 600));
+      }
+
+      // Lưu trực tiếp vào cơ sở dữ liệu Supabase
+      try {
+        await supabase.from('bookings').insert([
+          {
+            full_name: formData.fullName,
+            phone: formData.phone,
+            email: formData.email,
+            visitor_count: formData.visitorCount,
+            visit_date: formData.visitDate ? formData.visitDate : null,
+            experience_type: formData.experienceType,
+            message: formData.message,
+            status: 'pending'
+          }
+        ]);
+      } catch (dbErr) {
+        console.warn('Lưu Supabase booking thất bại:', dbErr);
       }
 
       setSuccess(true);
