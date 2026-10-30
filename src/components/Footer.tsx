@@ -15,18 +15,16 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBookingModal }
           
           {/* Brand info column */}
           <div className="md:col-span-5 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-[#C94E16] text-white flex items-center justify-center shadow-sm">
-                <Flame className="w-6 h-6 text-[#F8F5EF]" />
-              </div>
-              <div>
-                <h3 className="font-serif font-bold text-lg text-[#211D1A] tracking-tight">
-                  LÀNG RÈN HIỀN LƯƠNG
-                </h3>
-                <p className="text-[11px] font-semibold text-[#75543D] tracking-wider uppercase">
-                  500 NĂM LỬA LÒ CỐ ĐÔ
-                </p>
-              </div>
+            <div 
+              onClick={() => onNavigate('home')}
+              className="cursor-pointer inline-block"
+              title="Làng Hiền Lương"
+            >
+              <img
+                src="/assets/logo-hien-luong.png"
+                alt="Làng Hiền Lương — Di sản làng rèn cổ • Khởi 1471"
+                className="h-12 sm:h-14 w-auto object-contain"
+              />
             </div>
 
             <p className="text-xs sm:text-sm text-[#5C4D43] leading-relaxed">

@@ -123,7 +123,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F8F5EF] text-[#211D1A]">
+    <div className="min-h-screen w-full overflow-x-hidden flex flex-col bg-[#F8F5EF] text-[#211D1A]">
       
       {/* HEADER */}
       <Header
@@ -137,7 +137,7 @@ export default function App() {
       />
 
       {/* MAIN CONTENT AREA */}
-      <main className="flex-1">
+      <main className="flex-1 w-full overflow-x-hidden">
         {currentRoute === 'home' && (
           <HomePage
             onNavigate={handleNavigate}

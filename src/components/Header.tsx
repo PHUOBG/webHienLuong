@@ -55,59 +55,11 @@ export const Header: React.FC<HeaderProps> = ({
             </span>
           </div>
 
-          <div className="flex items-center gap-3 sm:gap-5 ml-auto">
-            <span className="text-[#C5A15B] hidden sm:inline">Tiếng Việt ▾</span>
-            
-            {user ? (
-              <div className="relative">
-                <button
-                  onClick={() => setUserDropdownOpen(!userDropdownOpen)}
-                  className="flex items-center gap-1.5 text-stone-200 hover:text-white transition-colors py-0.5 px-2 rounded-sm hover:bg-[#342D28]"
-                >
-                  <img
-                    src={user.photoURL || 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=40&auto=format&fit=crop&q=80'}
-                    alt={user.displayName || 'Tài khoản'}
-                    className="w-4 h-4 rounded-full object-cover border border-[#C5A15B]"
-                  />
-                  <span className="max-w-[100px] truncate">{user.displayName || user.email}</span>
-                  <ChevronDown className="w-3 h-3 text-stone-400" />
-                </button>
-
-                {userDropdownOpen && (
-                  <div className="absolute right-0 mt-1 w-56 bg-[#211D1A] border border-[#75543D] rounded-md shadow-xl py-2 z-50 text-xs">
-                    <div className="px-3 py-1.5 border-b border-[#38312B] text-stone-300">
-                      <p className="font-semibold text-[#F8F5EF]">{user.displayName}</p>
-                      <p className="text-[11px] text-stone-400 truncate">{user.email}</p>
-                      <div className="mt-1 flex items-center gap-1 text-[10px] text-emerald-400">
-                        <CheckCircle2 className="w-3 h-3" /> Đã kết nối Gmail gửi thư
-                      </div>
-                    </div>
-                    <button
-                      onClick={() => {
-                        onGoogleSignOut();
-                        setUserDropdownOpen(false);
-                      }}
-                      className="w-full text-left px-3 py-1.5 text-red-300 hover:bg-[#38312B] flex items-center gap-2"
-                    >
-                      <LogOut className="w-3.5 h-3.5" /> Đăng xuất Google
-                    </button>
-                  </div>
-                )}
-              </div>
-            ) : (
-              <button
-                onClick={onGoogleSignIn}
-                className="flex items-center gap-1.5 text-amber-200 hover:text-amber-100 hover:underline transition-colors"
-                title="Đăng nhập tài khoản Google để gửi đăng ký tham quan qua Gmail"
-              >
-                <UserIcon className="w-3.5 h-3.5" />
-                <span>Đăng nhập Gmail</span>
-              </button>
-            )}
-
+          <div className="flex items-center gap-3 sm:gap-4 ml-auto">
+            <span className="text-[#C5A15B] text-xs">Tiếng Việt ▾</span>
             <button
               onClick={() => onNavigate('lien-he')}
-              className="text-stone-300 hover:text-white hover:underline pl-2 border-l border-stone-700"
+              className="text-stone-300 hover:text-white hover:underline pl-3 border-l border-stone-700"
             >
               Liên hệ BQL
             </button>
@@ -116,31 +68,22 @@ export const Header: React.FC<HeaderProps> = ({
       </div>
 
       {/* Main navigation header */}
-      <div className="max-w-[1440px] mx-auto px-2.5 sm:px-4 lg:px-6 xl:px-8 py-2.5 sm:py-3 flex items-center justify-between gap-1.5 lg:gap-3">
+      <div className="max-w-[1440px] w-full mx-auto px-2.5 sm:px-4 lg:px-6 xl:px-8 py-2 sm:py-2.5 xl:py-3 flex items-center justify-between gap-1.5 lg:gap-2 xl:gap-3">
         {/* Brand identity */}
         <div 
           onClick={() => onNavigate('home')}
-          className="flex items-center gap-2 sm:gap-2.5 xl:gap-3 cursor-pointer group shrink-0"
+          className="flex items-center cursor-pointer group shrink-0 py-0.5"
+          title="Trang chủ Làng Hiền Lương"
         >
-          <div className="w-8 h-8 sm:w-9 sm:h-9 xl:w-10 xl:h-10 rounded-lg bg-[#C94E16] text-white flex items-center justify-center shadow-md shadow-[#C94E16]/20 transition-transform group-hover:scale-105 shrink-0">
-            <div className="relative">
-              <Flame className="w-4 h-4 sm:w-5 sm:h-5 text-[#F8F5EF] animate-pulse" />
-            </div>
-          </div>
-          <div className="shrink-0">
-            <div className="flex items-center gap-1">
-              <span className="font-serif font-bold text-sm sm:text-base xl:text-lg 2xl:text-xl tracking-tight text-[#211D1A] group-hover:text-[#C94E16] transition-colors whitespace-nowrap">
-                LÀNG RÈN HIỀN LƯƠNG
-              </span>
-            </div>
-            <p className="hidden md:block text-[9px] xl:text-[10px] 2xl:text-[11px] font-medium tracking-wider text-[#75543D] uppercase whitespace-nowrap">
-              DI SẢN NGHỀ TRUYỀN THỐNG SÔNG BỒ
-            </p>
-          </div>
+          <img
+            src="/assets/logo-hien-luong.png"
+            alt="Làng Hiền Lương — Di sản làng rèn cổ • Khởi 1471"
+            className="h-10 sm:h-12 lg:h-[50px] w-auto object-contain transition-transform group-hover:scale-[1.02]"
+          />
         </div>
 
         {/* Center navigation for desktop */}
-        <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1 2xl:gap-2 text-[11px] xl:text-[12px] 2xl:text-[13px] font-semibold text-[#211D1A] shrink-0">
+        <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1 text-[11px] xl:text-xs 2xl:text-[13px] font-semibold text-[#211D1A] shrink-0">
           {navItems.map((item) => {
             const isActive = currentRoute === item.route;
             return (
@@ -155,8 +98,8 @@ export const Header: React.FC<HeaderProps> = ({
               >
                 {item.shortLabel ? (
                   <>
-                    <span className="xl:hidden">{item.shortLabel}</span>
-                    <span className="hidden xl:inline">{item.label}</span>
+                    <span className="2xl:hidden">{item.shortLabel}</span>
+                    <span className="hidden 2xl:inline">{item.label}</span>
                   </>
                 ) : (
                   item.label
@@ -170,7 +113,7 @@ export const Header: React.FC<HeaderProps> = ({
         </nav>
 
         {/* Right actions */}
-        <div className="flex items-center gap-1 sm:gap-1.5 xl:gap-2.5 shrink-0">
+        <div className="flex items-center gap-1 sm:gap-1.5 xl:gap-2 shrink-0">
           {/* Search Button */}
           <button
             onClick={onOpenSearch}
@@ -184,17 +127,17 @@ export const Header: React.FC<HeaderProps> = ({
           {/* AI Assistant button */}
           <button
             onClick={onOpenAi}
-            className="hidden sm:inline-flex items-center gap-1.5 px-2 xl:px-2.5 2xl:px-3 py-1.5 rounded-full border border-[#C94E16] text-[#C94E16] bg-amber-50/60 hover:bg-[#C94E16] hover:text-white transition-all text-[11px] xl:text-xs font-semibold shadow-xs whitespace-nowrap shrink-0"
+            className="hidden md:inline-flex items-center gap-1.5 px-2 xl:px-2.5 2xl:px-3 py-1.5 rounded-full border border-[#C94E16] text-[#C94E16] bg-amber-50/60 hover:bg-[#C94E16] hover:text-white transition-all text-[11px] xl:text-xs font-semibold shadow-xs whitespace-nowrap shrink-0"
           >
             <Sparkles className="w-3.5 h-3.5 shrink-0 text-[#C94E16]" />
-            <span className="hidden xl:inline">Hư lão số AI</span>
-            <span className="inline xl:hidden">Hư lão AI</span>
+            <span className="hidden 2xl:inline">Hư lão số AI</span>
+            <span className="hidden xl:inline 2xl:hidden">Hư lão AI</span>
           </button>
 
           {/* Direction CTA */}
           <button
             onClick={() => onNavigate('lien-he')}
-            className="inline-flex items-center gap-1.5 bg-[#C94E16] hover:bg-[#B04212] text-white px-2.5 xl:px-3.5 py-1.5 rounded-md font-semibold text-[11px] xl:text-xs tracking-wide shadow-sm hover:shadow transition-all whitespace-nowrap shrink-0"
+            className="hidden sm:inline-flex items-center gap-1.5 bg-[#C94E16] hover:bg-[#B04212] text-white px-2.5 xl:px-3.5 py-1.5 rounded-md font-semibold text-[11px] xl:text-xs tracking-wide shadow-sm hover:shadow transition-all whitespace-nowrap shrink-0"
           >
             <Navigation className="w-3.5 h-3.5 shrink-0" />
             <span>CHỈ ĐƯỜNG</span>
@@ -245,28 +188,16 @@ export const Header: React.FC<HeaderProps> = ({
               <span>Trò chuyện cùng Hư lão số AI</span>
             </button>
 
-            {!user ? (
-              <button
-                onClick={() => {
-                  onGoogleSignIn();
-                  setMobileMenuOpen(false);
-                }}
-                className="w-full flex items-center justify-center gap-2 py-2 rounded-md bg-white border border-stone-300 text-stone-700 text-xs font-medium"
-              >
-                <UserIcon className="w-4 h-4 text-amber-700" />
-                <span>Đăng nhập Gmail để gửi đăng ký tham quan</span>
-              </button>
-            ) : (
-              <div className="p-2.5 bg-stone-100 rounded text-xs text-stone-700 flex items-center justify-between">
-                <span>{user.displayName || user.email}</span>
-                <button
-                  onClick={onGoogleSignOut}
-                  className="text-red-600 font-medium hover:underline"
-                >
-                  Đăng xuất
-                </button>
-              </div>
-            )}
+            <button
+              onClick={() => {
+                onNavigate('lien-he');
+                setMobileMenuOpen(false);
+              }}
+              className="w-full flex items-center justify-center gap-2 py-2 rounded-md bg-[#C94E16] text-white text-xs font-semibold"
+            >
+              <Navigation className="w-4 h-4" />
+              <span>Liên hệ & Chỉ đường BQL</span>
+            </button>
           </div>
         </div>
       )}
