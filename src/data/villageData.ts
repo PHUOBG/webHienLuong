@@ -244,18 +244,36 @@ export const HISTORIC_SITES: HistoricSite[] = [
   },
   {
     id: 'nha-tho-to-nghe-ren',
-    title: 'Nhà Thờ Tổ Nghề Rèn Hiền Lương',
-    subtitle: 'Tổ Đình Nghề Rèn Sông Bồ',
-    period: 'Tổ đình truyền đời phụng thờ Cụ Thủy tổ Hoàng Đình Chèm',
-    description: 'Tổ đình là không gian linh thiêng bậc nhất của cộng đồng phường rèn, nơi thờ tự cụ Thủy tổ Hoàng Đình Chèm (quê gốc Hoằng Hóa, Thanh Hóa) – người có công mang kỹ nghệ rèn sắt tiến bộ vào khai phá bãi bồi ven sông Bồ thời các chúa Nguyễn khai hoang Nam tiến. Tại gian chính điện, bức hoành phi sơn son thiếp vàng "Nghiệp Lưu Tổ Đức" cùng các văn bia chữ Nôm ghi tạc danh tính những bậc tiền bối khai sáng.',
+    title: 'Nhà Thờ Tổ Nghề Rèn Hiền Lương (Tổ Đình Nghề Rèn)',
+    subtitle: 'Không Gian Tâm Linh & Cội Nguồn Làng Rèn Đất Huế',
+    period: 'Khởi lập cuối thế kỷ 18 — Trùng tu phụng thờ Tổ Sư & Liệt Vị Tiên Sư',
+    description: 'Tổ Đình Nghề Rèn là không gian thiêng liêng nhất của cộng đồng phường rèn Hiền Lương, khởi đầu vào cuối thế kỷ 18 từ một ngôi nhà tranh rước thần chủ Tổ sư về thờ, sau được dân làng và các phường rèn phương Nam hỷ cúng trùng tu khang trang. Chính điện tôn thờ Tổ Sư nghề rèn — văn tế xưng tụng ngài là Tây Nhạc Kim Thiên Thuận Đế (về sau triều Nguyễn gia phong Thái Lợi Chi Thần), tả hữu phối thờ liệt vị Tiên Sư, Tiên hiền, Hậu hiền cùng những bậc tiền bối kiệt xuất. Nơi đây từng sản sinh những bậc kỳ tài của dân tộc như ngài Hoàng Văn Lịch — "Kỹ sư đóng tàu hơi nước đầu tiên của Việt Nam" (chỉ huy chế tạo 3 tàu thủy Yên Phi, Vân Phi, Vụ Phi, được vua Minh Mạng thụ phong Hầu tước) và ngài Trần Văn Đắc — người có công lớn rèn đúc vũ khí và huấn luyện thợ thuyền cho triều đình.',
     features: [
-      'Thờ tự Thủy tổ Hoàng Đình Chèm cùng các bậc tiền hiền khai canh khai cư',
-      'Hoành phi sơn son thiếp vàng "Nghiệp Lưu Tổ Đức"',
-      'Nơi diễn ra Lễ Giỗ Tổ Nghề Rèn hàng năm vào ngày 18 tháng 2 Âm lịch',
-      'Điểm tụ hội của con cháu phường rèn khắp mọi miền đất nước'
+      'Biển đại tự "TỔ ĐÌNH NGHỀ RÈN" sơn son thếp vàng cùng bức hoành phi cổ "Nghiệp Lưu Tổ Đức"',
+      'Mặt tiền 3 gian cổ kính với 4 cột hiên đắp nổi Rồng Vàng chầu và đôi Lân đá canh giữ thềm tam cấp',
+      'Tôn thờ ngài Tây Nhạc Kim Thiên Thuận Đế (Thái Lợi Chi Thần) & Liệt vị Tiên Sư bách nghệ',
+      'Vinh danh danh nhân Hoàng Văn Lịch (Kỹ sư tàu hơi nước đầu tiên của VN, thụ phong Hầu tước) & Trần Văn Đắc',
+      'Khuôn viên có la thành gạch, trụ biểu câu đối, bình phong chắn chướng khí và hồ sen trữ nước phòng hỏa',
+      'Chánh giỗ Tổ ngày 18 tháng Hai Âm lịch hàng năm quy tụ con cháu và hiệp hội "Hàng Kỉnh" từ khắp mọi miền'
     ],
-    image: '/assets/aistudio/c99QpHCNl6N_8DDZTmgsVqZnAC5TtCgEA_m9CbDwYir8w59UjA3rj7UrCUfw3xOSdLq2h1TQSqTFciZoUW1Mv09wCI2MNUFvZHIUx_W1R2H61nqKZHSuVOPe91NQYLd_PAJ7zLPE2nEKXdBDTBnEzae8K01sUPw3BPkWRen8Ob7yIymJ2nPI5QAgwJHyWaZn_5e83773e.jpg',
-    imageCaption: 'Khuôn viên Tổ Đình Nghề Rèn rợp bóng cây xanh và đường gạch đỏ trang nghiêm.'
+    image: '/assets/to-dinh-nghe-ren-toan-canh.jpg',
+    imageCaption: 'Tổ Đình Nghề Rèn Hiền Lương – Kiến trúc 3 gian cổ kính với 4 cột rồng vàng chầu và đôi lân đá canh giữ thềm tam cấp.',
+    gallery: [
+      {
+        id: 'td-toan-canh',
+        image: '/assets/to-dinh-nghe-ren-toan-canh.jpg',
+        title: 'Toàn Cảnh Tổ Đình Nghề Rèn Hiền Lương',
+        caption: 'Mặt tiền 3 gian cổ kính uy nghiêm',
+        desc: 'Mặt tiền 3 gian lợp ngói liệt, bờ nóc đắp giao long uốn lượn, 4 cột hiên đắp nổi rồng vàng chầu, hệ thống cửa gỗ lim và thềm tam cấp có đôi lân đá chầu oai nghiêm.'
+      },
+      {
+        id: 'td-le-te-to',
+        image: '/assets/to-dinh-nghe-ren-le-te-to.jpg',
+        title: 'Lễ Tế Tổ Sư & Vinh Danh Làng Nghề Truyền Thống',
+        caption: 'Nghi thức vinh danh tại hiên tiền đường Tổ Đình',
+        desc: 'Cận cảnh hàng cột rồng vàng, biển đại tự TỔ ĐÌNH NGHỀ RÈN và bức hoành phi cổ sơn son thiếp vàng "Nghiệp Lưu Tổ Đức" tại ngày hội tôn vinh nghệ nhân rèn Hiền Lương.'
+      }
+    ]
   },
   {
     id: 'hoi-dong-bo-lao',
@@ -498,13 +516,24 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 'hl-16',
     code: 'HL-16',
-    title: 'Tổ Đình Nghề Rèn nhìn từ trên cao',
+    title: 'Mặt tiền Tổ Đình Nghề Rèn Hiền Lương',
     category: 'di-tich',
     categoryLabel: 'DI TÍCH & TÂM LINH',
-    image: '/assets/aistudio/c99QpHCNl6N_8DDZTmgsVqZnAC5TtCgEA_m9CbDwYir8w59UjA3rj7UrCUfw3xOSdLq2h1TQSqTFciZoUW1Mv09wCI2MNUFvZHIUx_W1R2H61nqKZHSuVOPe91NQYLd_PAJ7zLPE2nEKXdBDTBnEzae8K01sUPw3BPkWRen8Ob7yIymJ2nPI5QAgwJHyWaZn_5e83773e.jpg',
-    caption: 'Khuôn viên Tổ Đình trang nghiêm nằm giữa làng vườn xanh mướt, nơi lưu giữ hồn cốt nghề rèn.',
+    image: '/assets/to-dinh-nghe-ren-toan-canh.jpg',
+    caption: 'Mặt tiền 3 gian cổ kính với 4 cột rồng vàng chầu và đôi lân đá canh giữ thềm tam cấp Tổ Đình.',
     meta: 'Tổ đình nghề rèn Hiền Lương',
-    attribution: 'Ảnh: Dân trí'
+    attribution: 'Ảnh: Khảo sát thực địa di tích'
+  },
+  {
+    id: 'hl-17',
+    code: 'HL-17',
+    title: 'Lễ Tế Tổ & Hoành Phi "Nghiệp Lưu Tổ Đức"',
+    category: 'di-tich',
+    categoryLabel: 'DI TÍCH & TÂM LINH',
+    image: '/assets/to-dinh-nghe-ren-le-te-to.jpg',
+    caption: 'Lễ tế Tổ sư ngày 18/2 Âm lịch và vinh danh nghệ nhân làng nghề trước hoành phi "Nghiệp Lưu Tổ Đức".',
+    meta: 'Lễ hội truyền thống • 18/2 Âm lịch',
+    attribution: 'Ảnh: Tư liệu Khám phá Huế'
   }
 ];
 

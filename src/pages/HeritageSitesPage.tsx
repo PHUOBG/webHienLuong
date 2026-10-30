@@ -16,9 +16,11 @@ export const HeritageSitesPage: React.FC<HeritageSitesPageProps> = ({
   onNavigate,
   onOpenBookingModal,
 }) => {
-  const [activePhotoIdx, setActivePhotoIdx] = useState<number | null>(null);
-  const giacLuongSite = HISTORIC_SITES.find(s => s.id === 'chua-giac-luong');
-  const photos = giacLuongSite?.gallery || [];
+  const [lightboxState, setLightboxState] = useState<{
+    siteTitle: string;
+    photos: { id: string; image: string; title: string; caption: string; desc: string }[];
+    currentIdx: number;
+  } | null>(null);
   return (
     <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 py-8 sm:py-12 space-y-10">
       
@@ -143,7 +145,7 @@ export const HeritageSitesPage: React.FC<HeritageSitesPageProps> = ({
 
                     {/* Featured Photo: Aerial Flycam View */}
                     <div 
-                      onClick={() => setActivePhotoIdx(0)}
+                      onClick={() => setLightboxState({ siteTitle: 'Chùa Cổ Giác Lương Tự', photos: site.gallery!, currentIdx: 0 })}
                       className="group relative rounded-2xl overflow-hidden border border-[#E8DFC9] bg-[#211D1A] cursor-pointer shadow-sm hover:shadow-xl transition-all"
                     >
                       <div className="h-64 sm:h-80 w-full overflow-hidden">
@@ -181,7 +183,7 @@ export const HeritageSitesPage: React.FC<HeritageSitesPageProps> = ({
                         return (
                           <div
                             key={photo.id}
-                            onClick={() => setActivePhotoIdx(actualIdx)}
+                            onClick={() => setLightboxState({ siteTitle: 'Chùa Cổ Giác Lương Tự', photos: site.gallery!, currentIdx: actualIdx })}
                             className="rounded-xl overflow-hidden border border-[#E8DFC9] bg-[#FAF8F4] group shadow-xs hover:shadow-md cursor-pointer transition-all flex flex-col"
                           >
                             <div className="relative h-44 overflow-hidden bg-stone-100">
@@ -214,6 +216,92 @@ export const HeritageSitesPage: React.FC<HeritageSitesPageProps> = ({
                           </div>
                         );
                       })}
+                    </div>
+                  </div>
+                )}
+
+                {/* Dedicated Comprehensive Documentary Section for Nhà Thờ Tổ Nghề Rèn */}
+                {site.id === 'nha-tho-to-nghe-ren' && site.gallery && site.gallery.length > 0 && (
+                  <div className="space-y-4 pt-3 border-t border-[#E8DFC9]/70">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                      <div>
+                        <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#FAF0E4] text-[#C94E16] text-[10px] font-bold uppercase tracking-wider mb-1">
+                          <Camera className="w-3 h-3" />
+                          <span>Tổ Đình Nghề Rèn • Khởi lập TK XVIII</span>
+                        </div>
+                        <h4 className="font-serif font-bold text-base text-[#211D1A] flex items-center gap-2">
+                          <Landmark className="w-4 h-4 text-[#C94E16]" />
+                          <span>Hình Ảnh & Kiến Trúc Tổ Đình Nghề Rèn Hiền Lương</span>
+                        </h4>
+                      </div>
+                      <span className="text-xs text-stone-500 font-medium self-start sm:self-auto">
+                        Tư liệu ảnh thực địa (Bấm để xem ảnh phóng to)
+                      </span>
+                    </div>
+
+                    {/* 2 Featured Photos Grid */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      {site.gallery.map((photo, pIdx) => (
+                        <div
+                          key={photo.id}
+                          onClick={() => setLightboxState({ siteTitle: 'Tổ Đình Nghề Rèn Hiền Lương', photos: site.gallery!, currentIdx: pIdx })}
+                          className="rounded-2xl overflow-hidden border border-[#E8DFC9] bg-[#FAF8F4] group shadow-xs hover:shadow-lg cursor-pointer transition-all flex flex-col"
+                        >
+                          <div className="relative h-56 sm:h-64 overflow-hidden bg-stone-900">
+                            <img
+                              src={photo.image}
+                              alt={photo.title}
+                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                              loading="lazy"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex flex-col justify-between p-4">
+                              <span className="self-start px-2.5 py-1 rounded-full bg-[#C94E16] text-white text-[10px] font-bold shadow-xs">
+                                {pIdx === 0 ? 'MẶT TIỀN 3 GIAN CỔ KÍNH' : 'LỄ TẾ TỔ & HOÀNH PHI CỔ'}
+                              </span>
+                              <div className="opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span className="px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-xs text-[#211D1A] text-xs font-bold flex items-center gap-1.5 shadow-sm">
+                                  <Eye className="w-3.5 h-3.5 text-[#C94E16]" /> Xem chi tiết ảnh
+                                </span>
+                              </div>
+                              <p className="text-xs font-bold text-white drop-shadow-sm">
+                                {photo.title}
+                              </p>
+                            </div>
+                          </div>
+                          <div className="p-3.5 text-[11px] text-stone-600 bg-white flex-1 flex flex-col justify-between">
+                            <p className="text-stone-600 leading-relaxed">
+                              {photo.desc}
+                            </p>
+                            <span className="text-[10px] text-[#C94E16] font-semibold mt-2.5 inline-flex items-center gap-1">
+                              <span>Phóng to tư liệu sắc nét</span>
+                              <ArrowRight className="w-2.5 h-2.5 group-hover:translate-x-1 transition-transform" />
+                            </span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Historical Context Callouts: Hoàng Văn Lịch, Trần Văn Đắc, Hàng Kỉnh & Lễ 18/2 */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                      <div className="p-3.5 rounded-xl bg-[#FAF4EB] border border-[#E8DFC9] space-y-1">
+                        <div className="flex items-center gap-1.5 text-xs font-bold text-[#C94E16]">
+                          <Award className="w-3.5 h-3.5" />
+                          <span>Danh nhân Hoàng Văn Lịch (Kỹ sư hơi nước)</span>
+                        </div>
+                        <p className="text-[11px] text-stone-600 leading-relaxed">
+                          Chỉ huy đóng 3 tàu hơi nước đầu tiên của Việt Nam (Yên Phi, Vân Phi, Vụ Phi), rèn súng hơi và gươm báu, được vua Minh Mạng thụ phong Hầu tước; nay được vinh danh đặt tên đường tại TP. Huế.
+                        </p>
+                      </div>
+
+                      <div className="p-3.5 rounded-xl bg-[#FAF4EB] border border-[#E8DFC9] space-y-1">
+                        <div className="flex items-center gap-1.5 text-xs font-bold text-[#75543D]">
+                          <Shield className="w-3.5 h-3.5 text-[#C94E16]" />
+                          <span>Hiệp hội Hàng Kỉnh & Lễ Giỗ Tổ 18/2 ÂL</span>
+                        </div>
+                        <p className="text-[11px] text-stone-600 leading-relaxed">
+                          Mạng lưới tương trợ cơ khí độc đáo của người thợ rèn Hiền Lương khắp phương Nam; ngày 18 tháng 2 Âm lịch hàng năm tề tựu về Tổ đình dâng hương tri ân cội nguồn.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 )}
@@ -395,11 +483,11 @@ export const HeritageSitesPage: React.FC<HeritageSitesPageProps> = ({
 
       </div>
 
-      {/* LIGHTBOX MODAL FOR CHÙA GIÁC LƯƠNG PHOTO GALLERY */}
-      {activePhotoIdx !== null && photos[activePhotoIdx] && (
+      {/* LIGHTBOX MODAL FOR HERITAGE SITES PHOTO GALLERIES */}
+      {lightboxState !== null && lightboxState.photos[lightboxState.currentIdx] && (
         <div 
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-md p-4 sm:p-6"
-          onClick={() => setActivePhotoIdx(null)}
+          onClick={() => setLightboxState(null)}
         >
           {/* Modal Container */}
           <div 
@@ -410,12 +498,12 @@ export const HeritageSitesPage: React.FC<HeritageSitesPageProps> = ({
             <div className="flex items-center justify-between px-5 py-3.5 border-b border-stone-800 bg-[#211D1A]">
               <div className="flex items-center gap-2 text-xs text-amber-200">
                 <Camera className="w-4 h-4 text-[#C94E16]" />
-                <span className="font-bold">TƯ LIỆU ĐIỀN DÃ CHÙA GIÁC LƯƠNG</span>
+                <span className="font-bold">{lightboxState.siteTitle}</span>
                 <span className="text-stone-500">•</span>
-                <span className="text-stone-400">Ảnh {activePhotoIdx + 1} / {photos.length}</span>
+                <span className="text-stone-400">Ảnh {lightboxState.currentIdx + 1} / {lightboxState.photos.length}</span>
               </div>
               <button
-                onClick={() => setActivePhotoIdx(null)}
+                onClick={() => setLightboxState(null)}
                 className="w-8 h-8 rounded-full bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white flex items-center justify-center transition"
                 title="Đóng (Esc)"
               >
@@ -426,15 +514,15 @@ export const HeritageSitesPage: React.FC<HeritageSitesPageProps> = ({
             {/* Main Image Display with Navigation Arrows */}
             <div className="relative flex-1 bg-black flex items-center justify-center min-h-[300px] max-h-[62vh] overflow-hidden">
               <img
-                src={photos[activePhotoIdx].image}
-                alt={photos[activePhotoIdx].title}
+                src={lightboxState.photos[lightboxState.currentIdx].image}
+                alt={lightboxState.photos[lightboxState.currentIdx].title}
                 className="max-w-full max-h-[60vh] object-contain select-none"
               />
 
               {/* Prev Button */}
-              {activePhotoIdx > 0 && (
+              {lightboxState.currentIdx > 0 && (
                 <button
-                  onClick={() => setActivePhotoIdx(activePhotoIdx - 1)}
+                  onClick={() => setLightboxState({ ...lightboxState, currentIdx: lightboxState.currentIdx - 1 })}
                   className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 hover:bg-[#C94E16] text-white flex items-center justify-center backdrop-blur-xs transition shadow-lg"
                   title="Ảnh trước"
                 >
@@ -443,9 +531,9 @@ export const HeritageSitesPage: React.FC<HeritageSitesPageProps> = ({
               )}
 
               {/* Next Button */}
-              {activePhotoIdx < photos.length - 1 && (
+              {lightboxState.currentIdx < lightboxState.photos.length - 1 && (
                 <button
-                  onClick={() => setActivePhotoIdx(activePhotoIdx + 1)}
+                  onClick={() => setLightboxState({ ...lightboxState, currentIdx: lightboxState.currentIdx + 1 })}
                   className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 hover:bg-[#C94E16] text-white flex items-center justify-center backdrop-blur-xs transition shadow-lg"
                   title="Ảnh kế tiếp"
                 >
@@ -458,21 +546,21 @@ export const HeritageSitesPage: React.FC<HeritageSitesPageProps> = ({
             <div className="p-5 bg-[#211D1A] border-t border-stone-800 space-y-3">
               <div>
                 <h3 className="font-serif font-bold text-base sm:text-lg text-[#F8F5EF]">
-                  {photos[activePhotoIdx].title}
+                  {lightboxState.photos[lightboxState.currentIdx].title}
                 </h3>
                 <p className="text-xs sm:text-sm text-stone-300 mt-1 leading-relaxed">
-                  {photos[activePhotoIdx].desc}
+                  {lightboxState.photos[lightboxState.currentIdx].desc}
                 </p>
               </div>
 
               {/* Thumbnail Strip */}
               <div className="flex items-center gap-2 overflow-x-auto pb-1 pt-1 scrollbar-thin">
-                {photos.map((p, idx) => (
+                {lightboxState.photos.map((p, idx) => (
                   <button
                     key={p.id}
-                    onClick={() => setActivePhotoIdx(idx)}
+                    onClick={() => setLightboxState({ ...lightboxState, currentIdx: idx })}
                     className={`shrink-0 w-14 h-11 rounded-md overflow-hidden border-2 transition-all ${
-                      idx === activePhotoIdx 
+                      idx === lightboxState.currentIdx 
                         ? 'border-[#C94E16] scale-105 shadow-md' 
                         : 'border-stone-700 opacity-60 hover:opacity-100'
                     }`}
