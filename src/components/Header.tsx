@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { PageRoute } from '../types';
 import { 
-  MapPin, Clock, Search, Sparkles, Navigation, Menu, X, 
-  Flame, User as UserIcon, LogOut, CheckCircle2, ChevronDown 
+  Search, Sparkles, Navigation, Menu, X 
 } from 'lucide-react';
 import { User } from 'firebase/auth';
 
@@ -11,9 +10,9 @@ interface HeaderProps {
   onNavigate: (route: PageRoute) => void;
   onOpenSearch: () => void;
   onOpenAi: () => void;
-  user: User | null;
-  onGoogleSignIn: () => void;
-  onGoogleSignOut: () => void;
+  user?: User | null;
+  onGoogleSignIn?: () => void;
+  onGoogleSignOut?: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -21,12 +20,8 @@ export const Header: React.FC<HeaderProps> = ({
   onNavigate,
   onOpenSearch,
   onOpenAi,
-  user,
-  onGoogleSignIn,
-  onGoogleSignOut,
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [userDropdownOpen, setUserDropdownOpen] = useState(false);
 
   const navItems: { route: PageRoute; label: string; shortLabel?: string }[] = [
     { route: 'home', label: 'TRANG CHỦ' },
@@ -41,31 +36,6 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <header className="sticky top-0 z-40 w-full bg-[#FAF8F4] border-b border-[#E8DFC9] shadow-xs">
-      {/* Top utility bar */}
-      <div className="bg-[#211D1A] text-[#EFE9DC] text-[11px] sm:text-xs py-1.5 px-3 sm:px-6 lg:px-8 border-b border-[#38312B]">
-        <div className="max-w-[1440px] mx-auto flex flex-wrap items-center justify-between gap-2">
-          <div className="flex items-center gap-4 sm:gap-6 flex-wrap">
-            <span className="flex items-center gap-1.5 text-stone-300">
-              <MapPin className="w-3.5 h-3.5 text-[#C94E16]" />
-              <span>Phong Hiền, Phong Điền, Thừa Thiên Huế</span>
-            </span>
-            <span className="hidden md:flex items-center gap-1.5 text-stone-300">
-              <Clock className="w-3.5 h-3.5 text-[#C5A15B]" />
-              <span>Giờ đón khách tham quan: 07:30 – 17:30</span>
-            </span>
-          </div>
-
-          <div className="flex items-center gap-3 sm:gap-4 ml-auto">
-            <span className="text-[#C5A15B] text-xs">Tiếng Việt ▾</span>
-            <button
-              onClick={() => onNavigate('lien-he')}
-              className="text-stone-300 hover:text-white hover:underline pl-3 border-l border-stone-700"
-            >
-              Liên hệ BQL
-            </button>
-          </div>
-        </div>
-      </div>
 
       {/* Main navigation header */}
       <div className="max-w-[1440px] w-full mx-auto px-2.5 sm:px-4 lg:px-6 xl:px-8 py-2 sm:py-2.5 xl:py-3 flex items-center justify-between gap-1.5 lg:gap-2 xl:gap-3">

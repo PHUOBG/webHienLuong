@@ -60,14 +60,14 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenBookingM
           <figure className="space-y-2">
             <div className="rounded-xl overflow-hidden border border-[#E8DFC9] shadow-sm">
               <img
-                src="/assets/aistudio/__n__ng__ang_r_n_3d1f5391.jpg"
-                alt="Cổng làng Hiền Lương đón chào du khách"
-                className="w-full h-[320px] sm:h-[420px] object-cover"
+                src="/assets/cong-lang-hien-luong-uong-nuoc-nho-nguon.jpg"
+                alt="Cổng làng Hiền Lương — Uống Nước Nhớ Nguồn"
+                className="w-full h-[320px] sm:h-[460px] object-cover"
               />
             </div>
             <figcaption className="text-xs text-stone-500 italic flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-[#C94E16]" />
-              Cổng làng Hiền Lương đón chào du khách
+              Cổng làng Hiền Lương với bức đại tự &ldquo;Uống Nước Nhớ Nguồn&rdquo; đón chào du khách thập phương
             </figcaption>
           </figure>
 
